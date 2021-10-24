@@ -221,7 +221,6 @@ button:hover::before {
 .spec__item:hover .overlay-spec {
     bottom: 0;
     height: 100%;
-    width: 100%;
 }
 
 
