@@ -1,11 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+p {
+    color: gray;
 }
 
 .space-nav {
     padding-top: 65px;
+}
+
+.title {
+    font-size: 2rem;
+    color: #666666;
+}
+
+.title__span {
+    color: #ff3838;
 }
 
 a {
@@ -102,6 +117,7 @@ button:hover::before {
     margin-top: 65px;
     /* position: relative; */
     height: 550px;
+    margin-top: 100px;
 }
 
 .home__content {
@@ -120,7 +136,7 @@ button:hover::before {
     position: absolute;
     left: 0;
     bottom: 0;
-    margin-bottom: -380px;
+    margin-bottom: -250px;
     margin-left: 30px;
 }
 
@@ -132,6 +148,19 @@ button:hover::before {
     50% {
         bottom: 30px;
     }
+}
+
+.home__text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home__text button {
+    margin-top: 20px;
+}
+
+.home__text {
+    margin-top: 40px;
 }
 
 
@@ -157,11 +186,42 @@ button:hover::before {
     padding: 30px 10px;
     border-radius: 5px;
     background-color: white;
+    position: relative;
 }
 
 .spec__item5,
 .spec__item6 {
     grid-column: auto / span 2;
+}
+
+.overlay-spec {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.overlay-spec img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+}
+
+.spec__item:hover .overlay-spec {
+    bottom: 0;
+    height: 100%;
+    width: 100%;
 }
 
 
