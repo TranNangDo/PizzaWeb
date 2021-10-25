@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="wrap">
+    <div class="load">
+        <img src="./images/loader.gif" alt="">
+    </div>
     <div>
         <!-- Navbar -->
         <section>
@@ -20,6 +24,7 @@
                     <div class="nav__logo">
                         <i class="fas fa-utensils"><span>Food</span></i>
                     </div>
+                    <div class="menu__mb-icon"><i id="menu-btn" class='menu-icon bx bx-menu'></i></div>
                     <div class="nav__menu">
                         <ul>
                             <li><a href="#home" class="active">Home</a></li>
@@ -38,12 +43,12 @@
         <section>
             <div class="home space-nav" id="home">
                 <div class="home__content">
-                    <div class="home__text l-6">
+                    <div class="home__text l-6 m-5">
                         <h2>Food Made With Love</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsa. Eos neque sapiente mollitia possimus ducimus vitae. Neque earum possimus, soluta impedit commodi, veniam dignissimos repellat recusandae officia magni aliquid?</p>
                         <button>Order Now</button>
                     </div>
-                    <div class="home__pic l-6">
+                    <div class="home__pic l-6 m-5">
                         <img src="./images/home-img.png" alt="">
                     </div>
                 </div>
@@ -385,18 +390,34 @@
                             <img src="./images/order-img.jpg" alt="">
                         </div>
                         <div class="order__info">
-                            <div class="form__input">
-                                <input type="text" placeholder="name"></div>
-                            <div class="form__input">
-                                <input type="text" placeholder="email"></div>
-                            <div class="form__input">
-                                <input type="text" placeholder="number"></div>
-                            <div class="form__input">
-                                <input type="text" placeholder="food name"></div>
-                            <div class="form__input address">
-                                <input type="text" placeholder="address" style="line-height: 120px;"></div>
+                            <div class="form__box">
+                                <div class="form__input">
+                                    <input type="text" placeholder="name" id="name">
+                                </div>
+                                <p class="warning" id="warning-name"></p>
+                            </div>
+                            <div class="form__box">
+                                <div class="form__input">
+                                    <input type="text" placeholder="email" id="email"></div>
+                                <p class="warning" id="warning-email"></p>
+                            </div>
+                            <div class="form__box">
+                                <div class="form__input">
+                                    <input type="text" placeholder="number" id="number"></div>
+                                <p class="warning" id="warning-number"></p>
+                            </div>
+                            <div class="form__box">
+                                <div class="form__input">
+                                    <input type="text" placeholder="food name" id="food-name"></div>
+                                <p class="warning" id="warning-food"></p>
+                            </div>
+                            <div class="form__box box__address">
+                                <div class="form__input address">
+                                    <input type="text" placeholder="address" style="line-height: 120px;" id="address"></div>
+                                <p class="warning" id="warning-address"></p>
+                            </div>
                             <div class="form__submit">
-                                <button>Order now</button></div>
+                                <button onclick="validateForm()" type="button">Order now</button></div>
                         </div>
                     </div>
                 </div>
@@ -418,7 +439,12 @@
                 </div>
             </div>
         </section>
+
+
+        <script src="./js/main.js"></script>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
 </body>
 
 </html>
