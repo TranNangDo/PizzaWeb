@@ -6,6 +6,10 @@
     font-family: "Quicksand", sans-serif;
 }
 
+.content {
+    padding: 25px;
+}
+
 .load {
     width: 100%;
     height: 100%;
@@ -87,6 +91,26 @@ button:hover::before {
 }
 
 
+/* Scroll */
+
+#myBtn {
+    font-size: 5rem;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ff3838;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+
 /* Navbar */
 
 .header {
@@ -96,16 +120,17 @@ button:hover::before {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
     max-width: 1366px;
     margin: auto;
+    z-index: 2;
 }
 
 .nav__menu {
@@ -117,6 +142,10 @@ button:hover::before {
     list-style-type: none;
     display: inline;
     margin-right: 18px;
+}
+
+.nav__menu ul li:hover {
+    color: #ff3838;
 }
 
 .nav__logo i {
@@ -141,8 +170,9 @@ button:hover::before {
     /* background-size: cover; */
     margin-top: 65px;
     /* position: relative; */
-    height: 550px;
-    margin-top: 100px;
+    height: 700px;
+    margin-top: 70px;
+    padding: 70px 15px;
 }
 
 .home__content {
@@ -156,7 +186,7 @@ button:hover::before {
 }
 
 .home__pic img {
-    width: 80%;
+    width: 90%;
     animation: MoveUpDown 2s linear infinite;
     position: absolute;
     left: 0;
@@ -176,7 +206,7 @@ button:hover::before {
 }
 
 .home__text h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
@@ -206,8 +236,8 @@ button:hover::before {
 
 .spec__item {
     text-align: center;
-    box-shadow: 0px -3px 18px 0px rgb(99 99 99 / 50%);
-    border: solid .1px black;
+    box-shadow: 0px 8px 9px 0px rgb(99 99 99 / 21%);
+    border: solid 1px #b6b2b2;
     padding: 30px 10px;
     border-radius: 5px;
     background-color: white;
@@ -269,8 +299,8 @@ button:hover::before {
 
 .popular__item {
     text-align: center;
-    box-shadow: 0px -3px 18px 0px rgb(99 99 99 / 50%);
-    border: solid .1px black;
+    box-shadow: 0px 8px 9px 0px rgb(99 99 99 / 21%);
+    border: solid 1px #b6b2b2;
     padding: 20px 20px;
     border-radius: 5px;
     background-color: white;
@@ -373,7 +403,7 @@ button:hover::before {
 }
 
 .gallery__item {
-    box-shadow: 0px -3px 18px 0px rgb(99 99 99 / 50%);
+    box-shadow: 0px 8px 9px 0px rgb(99 99 99 / 21%);
     border: solid 10px white;
     border-radius: 5px;
     position: relative;
@@ -498,6 +528,7 @@ button:hover::before {
     border: 0;
     outline: 0;
     width: 100%;
+    padding: 10px;
 }
 
 .warning {
@@ -531,12 +562,16 @@ button:hover::before {
 .footer__info button {
     background-color: rgb(0, 0, 0);
     margin-top: 30px;
+    width: 120px;
 }
 
 
 /* Responsive */
 
 @media (max-width: 740px) {
+    .content {
+        padding: 15px;
+    }
     .menu__mb-icon {
         display: block;
         font-size: 1.5rem;
@@ -545,26 +580,39 @@ button:hover::before {
         float: right;
     }
     .nav__menu {
-        width: 300px;
+        width: 100%;
         margin: 0;
         display: block;
         position: absolute;
-        top: 100px;
+        top: 65px;
         /* left: 0; */
+        padding: 20px;
         right: 0px;
         float: right;
-        z-index: 100;
+        z-index: 10000;
         margin-left: 30px;
         padding-right: 100px;
         background-color: #fff;
         transition: all 0.5s ease;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: #f7f7f7;
     }
     .nav__menu.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     .nav__menu li a {
         display: block;
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        border-right: 1px solid;
+        border-left: 4px solid #ff3838;
+        width: 125%;
+        height: 40px;
+        line-height: 40px;
+        background-color: white;
+    }
+    .home {
+        padding: 70px 15px;
     }
     .home__content {
         display: block;
@@ -572,6 +620,9 @@ button:hover::before {
     .home__text {
         margin-top: -100px;
         margin-bottom: 50px;
+    }
+    .home__text h2 {
+        font-size: 2.5rem;
     }
     .spec__item5,
     .spec__item6 {
@@ -591,6 +642,12 @@ button:hover::before {
     .order__form {
         display: block;
     }
+    .order__info {
+        padding: 10px;
+    }
+    .form__box {
+        grid-column: auto/span 2;
+    }
     .gallery__item img {
         width: 100%;
     }
@@ -606,6 +663,9 @@ button:hover::before {
 }
 
 @media (max-width: 1010px) and (min-width:741px) {
+    .content {
+        padding: 15px;
+    }
     .menu__mb-icon {
         display: block;
         font-size: 1.5rem;
@@ -614,26 +674,39 @@ button:hover::before {
         float: right;
     }
     .nav__menu {
-        width: 300px;
+        width: 100%;
         margin: 0;
         display: block;
         position: absolute;
-        top: 100px;
+        top: 65px;
         /* left: 0; */
+        padding: 20px;
         right: 0px;
         float: right;
-        z-index: 100;
+        z-index: 10000;
         margin-left: 30px;
         padding-right: 100px;
         background-color: #fff;
         transition: all 0.5s ease;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: #f7f7f7;
     }
     .nav__menu.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     .nav__menu li a {
         display: block;
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        border-right: 1px solid;
+        border-left: 4px solid #ff3838;
+        width: 125%;
+        height: 40px;
+        line-height: 40px;
+        background-color: white;
+    }
+    .home {
+        padding: 70px 15px;
     }
     .home__content {
         display: block;
@@ -643,10 +716,10 @@ button:hover::before {
         margin-bottom: 50px;
     }
     .home__pic img {
-        left: 147px;
+        left: 385px;
         /* bottom: -126px; */
-        margin-bottom: -332px;
-        width: 60%;
+        margin-bottom: 70px;
+        width: 90%;
     }
     .gallery__content {
         grid-template-columns: 1fr 1fr;
@@ -660,6 +733,7 @@ button:hover::before {
     }
     .order__form {
         display: block;
+        padding: 10px;
     }
     .order__pic img {
         width: 100%;
@@ -691,5 +765,14 @@ button:hover::before {
     }
     .gallery__item img {
         width: 100%;
+    }
+    .order__form {
+        padding: 10px;
+    }
+    .order__info {
+        grid-gap: 0px;
+    }
+    .form__box {
+        grid-column: auto/span 2;
     }
 }
