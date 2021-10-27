@@ -859,7 +859,7 @@ button:hover::before {
     }
 }
 
-@media (max-width :3000px) and (min-width :1900px) {
+@media (max-width :3000px) and (min-width :1950px) {
     .spec__item5,
     .spec__item6 {
         grid-column: auto / span 1;
