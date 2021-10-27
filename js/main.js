@@ -27,31 +27,38 @@ function validateForm() {
     let textNumber = "";
     let textFood = "";
     let textAddress = "";
-    if (name == "") {
-        textName = "Bạn Chưa Điền Tên";
-    }
-    if (email == "") {
-        textEmail = "Bạn Chưa Điền Email";
-    }
-    if (number == "") {
-        textNumber = "Bạn Chưa Điền Số Lượng";
-    }
-    if (foodName == "") {
-        textFood = "Bạn Chưa Điền Sản Phẩm";
-    }
-    if (address == "") {
-        textAddress = "Bạn Chưa Điền Địa Chỉ";
+    if (name == "" || email == "" || number == "" || foodName == "" || address == "") {
+        if (name == "") {
+            textName = "Bạn Chưa Điền Tên";
+        } else {
+            textName = "";
+        }
+        if (email == "") {
+            textEmail = "Bạn Chưa Điền Email";
+        } else {
+            textEmail = "";
+        }
+        if (number == "") {
+            textNumber = "Bạn Chưa Điền Số Lượng";
+        } else {
+            textNumber = "";
+        }
+        if (foodName == "") {
+            textFood = "Bạn Chưa Điền Sản Phẩm";
+        } else {
+            textFood = "";
+        }
+        if (address == "") {
+            textAddress = "Bạn Chưa Điền Địa Chỉ";
+        } else {
+            textAddress = "";
+        }
     } else {
-        textName = "";
-        textEmail = "";
-        textNumber = "";
-        textFood = "";
-        textAddress = "";
         alert(`name :  ${name}
-email :  ${email} 
-number : ${number}
-food name : ${foodName}
-Address : ${address}`
+ email :  ${email} 
+ number : ${number}
+ food name : ${foodName}
+ Address : ${address}`
             // ("Number :" + number) +
             // ("Food Name :" + foodName) +
             // ("Address :" + address));
@@ -65,13 +72,11 @@ Address : ${address}`
     document.getElementById("warning-address").innerHTML = textAddress;
 }
 
-
 setTimeout(function() {
     let x = document.querySelector(".load")
         // console.log(x);
     x.style.display = "none";
 }, 3000);
-
 
 
 
@@ -82,9 +87,11 @@ window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+        // mybutton.style.visibility = "visible";
+        document.querySelector('#myBtn').classList.add('activeBtn');
     } else {
-        mybutton.style.display = "none";
+        // mybutton.style.visibility = "hidden";
+        document.querySelector('#myBtn').classList.remove('activeBtn');
     }
 }
 
