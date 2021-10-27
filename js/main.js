@@ -54,15 +54,18 @@ function validateForm() {
             textAddress = "";
         }
     } else {
-        alert(`name :  ${name}
+        setTimeout(
+            function() {
+                alert(`name :  ${name}
  email :  ${email} 
  number : ${number}
  food name : ${foodName}
  Address : ${address}`
-            // ("Number :" + number) +
-            // ("Food Name :" + foodName) +
-            // ("Address :" + address));
-        )
+                    // ("Number :" + number) +
+                    // ("Food Name :" + foodName) +
+                    // ("Address :" + address));
+                )
+            }, 500)
 
     }
     document.getElementById("warning-name").innerHTML = textName;
