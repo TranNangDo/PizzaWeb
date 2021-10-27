@@ -142,7 +142,7 @@ button:hover::before {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
     z-index: 2;
 }
@@ -184,15 +184,15 @@ button:hover::before {
     /* background-size: cover; */
     margin-top: 65px;
     /* position: relative; */
-    height: 100vh;
-    margin-top: 100px;
-    padding: 70px 15px;
+    height: calc(100vh - 10vh);
+    margin-top: 10vh;
+    /* padding: 0px 15px; */
 }
 
 .home__content {
     display: flex;
     /* max-width: 1366px; */
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
 }
 
@@ -201,13 +201,13 @@ button:hover::before {
 }
 
 .home__pic img {
-    width: 90%;
+    width: 100%;
     animation: MoveUpDown 2s linear infinite;
     position: absolute;
     left: 0;
     bottom: 0;
-    margin-bottom: -250px;
-    margin-left: 30px;
+    margin-bottom: -40vh;
+    margin-left: 10vh;
 }
 
 @keyframes MoveUpDown {
@@ -242,8 +242,8 @@ button:hover::before {
 
 .spec__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
+    max-width: 80%;
     margin: auto;
     grid-gap: 20px;
     margin-top: 20px;
@@ -304,9 +304,8 @@ button:hover::before {
 
 .popular__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(370px, 1fr));
-    max-width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
+    max-width: 80%;
     margin: auto;
     grid-gap: 20px;
     margin-top: 20px;
@@ -366,7 +365,7 @@ button:hover::before {
 
 .work__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
 }
 
 .work__item img {
@@ -420,9 +419,9 @@ button:hover::before {
 
 .gallery__content {
     display: grid;
-    grid-template-columns: repeat(4/25%);
-    grid-template-rows: 220px 220px 220px;
-    max-width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 20vw, 20vw, 20vw));
+    grid-template-rows: 25vh 25vh 25vh;
+    max-width: 80%;
     margin: auto;
     grid-gap: 20px;
     margin-top: 20px;
@@ -438,6 +437,7 @@ button:hover::before {
 .gallery__item img {
     height: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
 .gallery__item7 {
@@ -453,13 +453,13 @@ button:hover::before {
 
 .review {
     text-align: center;
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
 }
 
 .review__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
     grid-gap: 20px;
     margin-top: 60px;
 }
@@ -500,7 +500,7 @@ button:hover::before {
 /* order */
 
 .order {
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
 }
 
@@ -528,7 +528,7 @@ button:hover::before {
 
 .order__info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
     width: 100%;
     grid-row-gap: 20px;
     grid-column-gap: 15px;
@@ -602,6 +602,12 @@ button:hover::before {
     .content {
         padding: 15px;
     }
+    .navbar {
+        max-width: 100%;
+    }
+    .nav__logo {
+        margin: auto;
+    }
     .menu__mb-icon {
         display: block;
         font-size: 2rem;
@@ -647,32 +653,53 @@ button:hover::before {
         padding: 0 10px;
     }
     .home {
-        padding: 70px 15px;
+        /* padding: 70px 15px; */
+        height: calc(100vh - 10vh);
+        margin-top: 15vh;
     }
     .home__content {
         display: block;
     }
     .home__text {
-        margin-top: -100px;
-        margin-bottom: 50px;
+        margin-top: -10vh;
+        /* margin-bottom: 50vh; */
     }
     .home__text h2 {
         font-size: 2.5rem;
     }
+    .home__pic img {
+        margin-left: 0;
+    }
+    .spec__content {
+        max-width: 100%;
+    }
     .spec__item5,
     .spec__item6 {
         grid-column: auto / span 1;
+    }
+    .popular__content {
+        max-width: 100%;
     }
     .popular__item5,
     .popular__item6 {
         grid-column: auto / span 1;
     }
     .gallery__content {
+        max-width: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
     .gallery__item7 {
         grid-column: auto / span 1;
+    }
+    .review {
+        max-width: 100%;
+    }
+    .review__item {
+        margin-top: 20px;
+    }
+    .order {
+        max-width: 100%;
     }
     .order__form {
         display: block;
@@ -703,7 +730,7 @@ button:hover::before {
     }
     .menu__mb-icon {
         display: block;
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
     .menu__mb-icon i {
         float: right;
@@ -740,24 +767,27 @@ button:hover::before {
         line-height: 40px;
         background-color: white;
     }
-    .home {
-        padding: 70px 15px;
-    }
+    .home {}
     .home__content {
         display: block;
     }
     .home__text {
-        margin-top: -100px;
-        margin-bottom: 50px;
+        margin-top: 0;
     }
     .home__pic img {
-        left: 385px;
+        left: 30vh;
         /* bottom: -126px; */
-        margin-bottom: 70px;
-        width: 90%;
+        margin-bottom: 7vh;
+        width: 100%;
+    }
+    .spec__content {
+        grid-template-columns: 30vh 30vh;
+    }
+    .popular__content {
+        grid-template-columns: 30vh 30vh;
     }
     .gallery__content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 30vh 30vh;
         grid-template-rows: auto;
     }
     .gallery__item7 {
@@ -779,13 +809,22 @@ button:hover::before {
 }
 
 @media (max-width :1024px) and (min-width :1011px) {
+    .nav__logo {
+        margin: auto 0;
+    }
     .home__pic img {
         width: 100%;
-        margin-bottom: -100px;
+        margin-bottom: 0vh;
+    }
+    .spec__content {
+        grid-template-columns: 18vh 18vh 18vh;
     }
     .spec__item5,
     .spec__item6 {
         grid-column: auto / span 1;
+    }
+    .popular__content {
+        grid-template-columns: 18vh 18vh 18vh;
     }
     .popular__item5,
     .popular__item6 {
@@ -801,13 +840,21 @@ button:hover::before {
     .gallery__item img {
         width: 100%;
     }
+    .review__item {
+        margin-top: 10vh;
+    }
     .order__form {
         padding: 10px;
     }
     .order__info {
         grid-gap: 0px;
+        width: 50%;
     }
     .form__box {
         grid-column: auto/span 2;
+    }
+    .order__pic img {
+        width: 100%;
+        height: 100%;
     }
 }
