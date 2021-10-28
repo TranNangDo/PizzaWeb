@@ -75,6 +75,7 @@ function validateForm() {
     document.getElementById("warning-address").innerHTML = textAddress;
 }
 
+
 setTimeout(function() {
     let x = document.querySelector(".load")
         // console.log(x);
